@@ -11,7 +11,7 @@
     }
     .hero_elements {
         display: flex;
-        padding: 180px 0 50px;
+        padding: 180px 0 90px;
         .hero_elements_left {
             .elements_left_title {
                 position: relative;
@@ -96,43 +96,47 @@
             right: 0;
         }
     }
-    .hero_bottom_card {
-        width: 90%;
-        position: absolute;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        display: flex;
-        justify-content: space-between;
-        background: #ffffff;
-        box-shadow: 0px 20px 60px rgba(0, 54, 110, 0.057595);
-        border-radius: 10px;
-        padding: 50px;
-        .bottom_card_inormation {
+    .hero_bottom_card_position {
+        width: 100%;
+        position: relative;
+        .hero_bottom_card {
+            box-shadow: 0px 20px 60px rgba(0, 54, 110, 0.057595);
+            position: absolute;
+            margin: 0 auto;
+            bottom: -100px;
+            left: 0;
+            right: 0;
             display: flex;
-            align-items: center;
-            img {
-                margin-right: 27px;
-            }
-            .bottom_card_inormation_desc {
-                h3 {
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 15px;
-                    line-height: 18px;
-                    letter-spacing: 0.9375px;
-                    text-transform: uppercase;
-                    color: #000000;
-                    mix-blend-mode: normal;
-                    opacity: 0.26;
+            justify-content: space-between;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 50px;
+            .bottom_card_inormation {
+                display: flex;
+                align-items: center;
+                img {
+                    margin-right: 27px;
                 }
-                p {
-                    font-style: normal;
-                    font-weight: 400;
-                    max-width: 200px;
-                    font-size: 24px;
-                    line-height: 31px;
-                    color: #000000;
+                .bottom_card_inormation_desc {
+                    h3 {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 18px;
+                        letter-spacing: 0.9375px;
+                        text-transform: uppercase;
+                        color: #000000;
+                        mix-blend-mode: normal;
+                        opacity: 0.26;
+                    }
+                    p {
+                        font-style: normal;
+                        font-weight: 400;
+                        max-width: 200px;
+                        font-size: 24px;
+                        line-height: 31px;
+                        color: #000000;
+                    }
                 }
             }
         }

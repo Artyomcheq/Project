@@ -75,9 +75,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-		<div className={s.footer_copyright}>
-			<h3>© Copyright 2021 Your company name</h3>
-		</div>
+        <div className={s.footer_copyright}>
+          <h3>© Copyright 2021 Your company name</h3>
+        </div>
       </div>
     </div>
   );

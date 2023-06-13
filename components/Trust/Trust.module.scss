@@ -1,0 +1,27 @@
+.trust {
+    width: 100%;
+    background: #c2eced;
+    padding: 170px 0;
+    .trust_title {
+        .trus_general_title {
+            position: relative;
+            display: flex;
+           align-items: center;
+            flex-direction: column;
+            h3 {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 62px;
+                line-height: 76px;
+                max-width: 900px;
+                text-align: center;
+                color: #0e0e0e;
+            }
+            img {
+                position: absolute;
+                left: 290px;
+                top: -10px;
+            }
+        }
+    }
+}

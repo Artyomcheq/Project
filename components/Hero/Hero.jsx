@@ -11,7 +11,7 @@ const Hero = () => {
           <Image
             src="/heroBackground.png"
             alt="background"
-            width={1800}
+            width={2000}
             height={1100}
           />
         </div>
@@ -46,31 +46,33 @@ const Hero = () => {
             </div>
           </div>
           <div className={s.hero_element_right}>
-                <Image src="/heroImg.png" height={500} width={550} alt="heroImg" />
+            <Image src="/heroImg.png" height={500} width={550} alt="heroImg" />
           </div>
         </div>
-        <div className={s.hero_bottom_card}>
+        <div className={s.hero_bottom_card_position}>
+          <div className={s.hero_bottom_card}>
             <div className={s.bottom_card_inormation}>
-                <Image src="/pinkTick.png" width={53} height={53} alt="tick" />
-                <div className={s.bottom_card_inormation_desc}>
-                    <h3>code free setup</h3>
-                    <p>One click integration</p>
-                </div>
+              <Image src="/pinkTick.png" width={53} height={53} alt="tick" />
+              <div className={s.bottom_card_inormation_desc}>
+                <h3>code free setup</h3>
+                <p>One click integration</p>
+              </div>
             </div>
             <div className={s.bottom_card_inormation}>
-                <Image src="/blueTick.png" width={53} height={53} alt="tick" />
-                <div className={s.bottom_card_inormation_desc}>
-                    <h3>Lowest Price</h3>
-                    <p>transaction fee, lowest in Industry</p>
-                </div>
+              <Image src="/blueTick.png" width={53} height={53} alt="tick" />
+              <div className={s.bottom_card_inormation_desc}>
+                <h3>Lowest Price</h3>
+                <p>transaction fee, lowest in Industry</p>
+              </div>
             </div>
             <div className={s.bottom_card_inormation}>
-                <Image src="/yellowTick.png" width={53} height={53} alt="tick" />
-                <div className={s.bottom_card_inormation_desc}>
-                    <h3>Global withdrawals</h3>
-                    <p>Instant transfer to your bank account</p>
-                </div>
+              <Image src="/yellowTick.png" width={53} height={53} alt="tick" />
+              <div className={s.bottom_card_inormation_desc}>
+                <h3>Global withdrawals</h3>
+                <p>Instant transfer to your bank account</p>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
