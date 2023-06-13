@@ -11,7 +11,7 @@ const Trust = () => {
   return (
     <div className={s.trust}>
       <div className={s.trust_title}>
-        <div className={s.trust_general_title}>
+        <div className={s.trust_title_general}>
           <h3>Don’t trust us. Trust the industry leaders</h3>
           <Image
             src="/trustShape.png"
@@ -20,7 +20,7 @@ const Trust = () => {
             alt="trustShape"
           />
         </div>
-        <div className={s.trust_second_title}>
+        <div className={s.trust_title_second}>
           <p>See what are users are saying about our services and support</p>
         </div>
       </div>

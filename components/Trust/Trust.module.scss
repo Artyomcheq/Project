@@ -3,7 +3,7 @@
     background: #c2eced;
     padding: 170px 0;
     .trust_title {
-        .trust_general_title {
+        .trust_title_general {
             max-width: 900px;
             width: 100%;
             position: relative;
@@ -28,7 +28,7 @@
                 top: -10px;
             }
         }
-        .trust_second_title {
+        .trust_title_second {
             p {
                 font-style: normal;
                 font-weight: 400;
@@ -47,10 +47,8 @@
             align-items: center;
             flex-direction: column;
             background: #ffffff;
-            box-shadow: 0px 30px 604px rgba(28, 90, 104, 0.0947727);
             border-radius: 10px;
             padding: 46px 100px;
-
             .trust_swiper_card_title {
                 padding: 11px 0 30px 0;
                 h3 {
