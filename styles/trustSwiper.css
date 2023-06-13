@@ -1,14 +1,42 @@
 .trust_swiper {
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  
 }
 
 .trust_swiper .swiper-slide {
   padding: 10px;
 }
 
+.swiper-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-out;
+}
+
+.swiper-slide-next {
+  transform: scale(0.7) !important;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.swiper-slide-active {
+  transform: scale(1) !important;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
+}
+
+.swiper-slide-prev {
+  transform: scale(0.7) !important;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
 .custom_btns {
   position: absolute;
-  width: 49.5%;
+  width: 50%;
   margin: 0 auto;
   top: 0;
   bottom: 0;

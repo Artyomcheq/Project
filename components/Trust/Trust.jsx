@@ -32,7 +32,7 @@ const Trust = () => {
             nextEl: ".swiper-button-next",
           }}
           slidesPerView={2}
-          spaceBetween={30}
+          speed={700}
           modules={[Navigation]}
           centeredSlides={true}
           centeredSlidesBounds={true}
