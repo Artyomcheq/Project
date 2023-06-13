@@ -1,5 +1,10 @@
 .header {
-    width: 100%;
+    z-index: 10000;
+    position: fixed;
+    width: 90%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -31,6 +36,7 @@
                 input {
                     border: none;
                     outline: none;
+                    background: none;
                     padding: 0 0 10px 5px;
                 }
             }
@@ -74,6 +80,7 @@
         display: flex;
         justify-content: space-between;
         padding: 0 10px;
+        background: #FFFFFF;
         .header_bottom_row_links {
             width: 50%;
             display: flex;

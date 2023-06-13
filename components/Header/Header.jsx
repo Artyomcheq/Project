@@ -5,7 +5,6 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="container">
       <div className={s.header}>
         <div className={s.header_top_row}>
           <div className={s.header_top_row_logo}>
@@ -41,7 +40,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

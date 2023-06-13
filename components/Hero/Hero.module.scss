@@ -1,0 +1,140 @@
+.hero {
+    width: 100%;
+    height: 100%;
+    .hero_background {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+    .hero_elements {
+        display: flex;
+        padding: 180px 0 50px;
+        .hero_elements_left {
+            .elements_left_title {
+                position: relative;
+                max-width: 700px;
+                h3 {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 90px;
+                    line-height: 105px;
+                    color: #000000;
+                }
+                img {
+                    position: absolute;
+                    top: 80px;
+                    z-index: -1;
+                }
+            }
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 33px;
+                color: #000000;
+                max-width: 520px;
+            }
+            .elements_left_btns {
+                padding: 30px 0;
+                button:nth-child(1) {
+                    background: #ff3f3f;
+                    border-radius: 5px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 23px;
+                    padding: 13px 21px;
+                    color: #ffffff;
+                    margin-right: 10px;
+                }
+                button:nth-child(2) {
+                    background: #ffffff;
+                    border: 1.6px solid #000000;
+                    border-radius: 5px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 23px;
+                    padding: 13px 21px;
+                    color: #000000;
+                }
+            }
+            .elements_left_reviews {
+                display: flex;
+                align-items: center;
+                h3 {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 48px;
+                    line-height: 64px;
+                    color: #000000;
+                    margin-right: 20px;
+                }
+                .elements_left_reviews_rating {
+                    p {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: #000000;
+                        mix-blend-mode: normal;
+                        opacity: 0.5;
+                    }
+                    .left_reviews_rating_stars {
+                        img {
+                            margin: 7px 5px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+        .hero_element_right {
+            position: absolute;
+            right: 0;
+        }
+    }
+    .hero_bottom_card {
+        width: 90%;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        background: #ffffff;
+        box-shadow: 0px 20px 60px rgba(0, 54, 110, 0.057595);
+        border-radius: 10px;
+        padding: 50px;
+        .bottom_card_inormation {
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 27px;
+            }
+            .bottom_card_inormation_desc {
+                h3 {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 18px;
+                    letter-spacing: 0.9375px;
+                    text-transform: uppercase;
+                    color: #000000;
+                    mix-blend-mode: normal;
+                    opacity: 0.26;
+                }
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    max-width: 200px;
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
