@@ -26,12 +26,17 @@ const Trust = () => {
       </div>
       <div className={s.trust_swiper}>
         <Swiper
-        loop
-        navigation={true}
-        slidesPerView={1}
-        spaceBetween={20}
-        modules={[Navigation]}
-        className="trust_swiper"
+          loop
+          navigation={{
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+          }}
+          slidesPerView={2}
+          spaceBetween={30}
+          modules={[Navigation]}
+          centeredSlides={true}
+          centeredSlidesBounds={true}
+          className="trust_swiper"
         >
           {trustCard.map((item) => (
             <SwiperSlide>
@@ -47,6 +52,10 @@ const Trust = () => {
               </div>
             </SwiperSlide>
           ))}
+          <div className="custom_btns">
+            <div className="swiper-button-prev" />
+            <div className="swiper-button-next" />
+          </div>
         </Swiper>
       </div>
     </div>

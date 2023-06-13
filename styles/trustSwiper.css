@@ -1,9 +1,40 @@
 .trust_swiper {
-  width: 50%;
-
+  width: 100%;
 }
 
 .trust_swiper .swiper-slide {
   padding: 10px;
-  
+}
+
+.custom_btns {
+  position: absolute;
+  width: 49.5%;
+  margin: 0 auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-10%);
+}
+
+.swiper-button-prev:after {
+  content: "" !important;
+  background: url("../public/sliderBtn.png") right/cover;
+  width: 40px;
+  height: 40px;
+  left: 0;
+}
+
+.swiper-button-next:after {
+  content: "" !important;
+  background: url("../public/sliderBtnRight.png") left/cover;
+  width: 40px;
+  height: 40px;
+  right: 0;
 }
