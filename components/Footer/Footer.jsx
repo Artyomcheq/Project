@@ -24,14 +24,15 @@ const Footer = () => {
           </div>
           <div className={s.footer_links}>
             <h3>Links</h3>
+            {""}
             {footerLinks.map((item) => (
-              <Link href="#">{item.title}</Link>
+              <Link key={item.id} href="#">{item.title}</Link>
             ))}
           </div>
           <div className={s.footer_help}>
             <h3>Help & Support</h3>
             {footerHelp.map((item) => (
-              <Link href="#">{item.title}</Link>
+              <Link key={item.id} href="#">{item.title}</Link>
             ))}
           </div>
           <div className={s.footer_our_address}>

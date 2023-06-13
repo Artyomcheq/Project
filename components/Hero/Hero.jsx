@@ -39,7 +39,7 @@ const Hero = () => {
                 <p>top rated on trustpilot</p>
                 <div className={s.left_reviews_rating_stars}>
                   {heroStar.map((item) => (
-                    <Image src={item.img} width={15} height={15} alt="star" />
+                    <Image key={item.id} src={item.img} width={15} height={15} alt="star" />
                   ))}
                 </div>
               </div>

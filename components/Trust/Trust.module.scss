@@ -3,10 +3,15 @@
     background: #c2eced;
     padding: 170px 0;
     .trust_title {
-        .trus_general_title {
+        .trust_general_title {
+            max-width: 900px;
+            width: 100%;
             position: relative;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
             display: flex;
-           align-items: center;
+            align-items: center;
             flex-direction: column;
             h3 {
                 font-style: normal;
@@ -19,8 +24,66 @@
             }
             img {
                 position: absolute;
-                left: 290px;
+                left: 60px;
                 top: -10px;
+            }
+        }
+        .trust_second_title {
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                text-align: center;
+                line-height: 28px;
+                color: #0e0e0e;
+                padding: 34px 0 100px 0;
+            }
+        }
+    }
+    .trust_swiper {
+        .trust_swiper_card {
+          
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background: #ffffff;
+            box-shadow: 0px 30px 604px rgba(28, 90, 104, 0.0947727);
+            border-radius: 10px;
+            padding: 20px 40px;
+
+            .trust_swiper_card_title {
+                padding: 11px 0 30px 0;
+                h3 {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 25px;
+                    text-align: center;
+                    color: #1b1b1b;
+                }
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 18px;
+                    text-align: center;
+                    letter-spacing: 0.9375px;
+                    text-transform: uppercase;
+                    color: #000000;
+                    mix-blend-mode: normal;
+                    opacity: 0.26;
+                }
+            }
+            .trust_swiper_card_comment {
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 25px;
+                    text-align: center;
+                    color: #1b1b1b;
+                }
             }
         }
     }
