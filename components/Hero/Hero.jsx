@@ -18,7 +18,7 @@ const Hero = () => {
         <div className={s.hero_elements}>
           <div className={s.hero_elements_left}>
             <div className={s.elements_left_title}>
-              <h3>Start accepting payments in 3 minutes</h3>
+              <h1>Start accepting payments in 3 minutes</h1>
               <Image
                 src="/heroShape.png"
                 width={416}

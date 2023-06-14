@@ -1,0 +1,150 @@
+.finance {
+    width: 100%;
+    height: 100%;
+    .finance_background {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+    .finanse_elements_all {
+        position: relative;
+        .finance_elements {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 350px 0 100px 0;
+            .finance_elements_title {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 866px;
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 23px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    color: #000000;
+                    mix-blend-mode: normal;
+                    opacity: 0.3;
+                }
+                .finance_elements_title_general {
+                    position: relative;
+                    padding: 25px 0 118px 0;
+                    h3 {
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 62px;
+                        line-height: 68px;
+                        text-align: center;
+                        color: #0e0e0e;
+                    }
+                    img {
+                        position: absolute;
+                        top: 10px;
+                        left: -30px;
+                    }
+                }
+            }
+            .finance_elements_cards {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                .finance_elements_card {
+                    width: 31%;
+                    .finance_elements_card_background {
+                        height: 250px;
+                        background: #d0d0d0;
+                        border-radius: 5px;
+                    }
+                    .finance_elements_card_desc {
+                        width: 100%;
+                        p {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 17px;
+                            line-height: 20px;
+                            letter-spacing: 0.944444px;
+                            text-transform: uppercase;
+                            color: #e74a4a;
+                            padding: 15px 0 0 0;
+                        }
+                        h3 {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 29px;
+                            line-height: 38px;
+                            color: #000000;
+                            padding: 15px 0;
+                        }
+                        .elements_card_link {
+                            display: flex;
+                            align-items: center;
+                            a {
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 18px;
+                                line-height: 25px;
+                                color: #000000;
+                            }
+                            img {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .finance_bottom_row {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -250px;
+            display: flex;
+            justify-content: space-between;
+            background: #ffffff;
+            box-shadow: 0px 40px 100px rgba(8, 15, 21, 0.0529529);
+            border-radius: 10px;
+            padding: 67px 61px;
+            .finance_bottom_row_title {
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #000000;
+                }
+                .bottom_row_title_general {
+                    position: relative;
+                    h3 {
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 48px;
+                        line-height: 37px;
+                        color: #000000;
+                        padding: 0 0 27px 0;
+                    }
+                    img {
+                        position: absolute;
+                        top: -25px;
+                        left: 110px;
+                    }
+                }
+            }
+            button {
+                background: #fd3b39;
+                border-radius: 7px;
+                padding: 27px 46px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 20px;
+                color: #ffffff;
+            }
+        }
+    }
+}
