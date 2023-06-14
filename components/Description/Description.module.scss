@@ -1,0 +1,146 @@
+.description {
+  background: #fff3d4;
+  // height: 200vh;
+  .description_des {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 227px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    // height: 200px;
+    .description_des_title {
+      font-family: "PT Serif";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 62px;
+      line-height: 75px;
+      text-align: center;
+      color: #000000;
+    }
+    .description_des_text {
+      font-family: "Rubik";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      color: #1b1b1b;
+      margin-bottom: 146px;
+    }
+    img {
+      width: 35%;
+      height: 25%;
+      position: absolute;
+    }
+  }
+  .cards {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+    align-items: center;
+    margin-bottom: 136px;
+    z-index: 1;
+    .cards_blue {
+      position: absolute;
+      z-index: -1;
+      left: -28px;
+      top: -23px;
+    }
+    .cards_green {
+      position: absolute;
+      bottom: -60px;
+      right: -70px;
+
+      z-index: -1;
+    }
+    .cards_card {
+      display: flex;
+      width: 100%;
+      background: white;
+      padding: 50px 75px;
+      gap: 120px;
+      border-radius: 10px;
+      .cards__card_img {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .cards_card_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .cards_card_text__title {
+          font-family: "Rubik";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 30px;
+          letter-spacing: 0.857143px;
+          text-transform: uppercase;
+          color: #eb4343;
+        }
+        .cards_card_text__set {
+          font-family: "PT Serif";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 42px;
+          line-height: 54px;
+          /* or 129% */
+
+          color: #000000;
+        }
+        .cards_card_text__des {
+          font-family: "Rubik";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 36px;
+          /* or 150% */
+
+          color: #000000;
+        }
+      }
+    }
+  }
+  .description_bottom__title {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 96px;
+    .description_bottom__title_text {
+      font-family: 'PT Serif';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 62px;
+      text-align: center; 
+      color: #000000;
+    }
+    .description_bottom__title_btn {
+      width: 220px;
+      height: 59px;
+      font-family: 'Circular';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      background: #FF3F3F;
+      border-radius: 6px;
+      color: #FFFFFF;
+      margin-bottom: 172px;
+    }
+  }
+}
