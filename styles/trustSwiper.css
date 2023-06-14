@@ -49,6 +49,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-10%);
+  transition: .3s;
 }
 
 .swiper-button-prev:after {
@@ -59,10 +60,18 @@
   left: 0;
 }
 
+.swiper-button-prev:hover {
+  transform: scale(1.08);
+}
+
 .swiper-button-next:after {
   content: "" !important;
   background: url("../public/sliderBtnRight.png") left/cover;
   width: 40px;
   height: 40px;
   right: 0;
+}
+
+.swiper-button-next:hover {
+  transform: scale(1.08);
 }

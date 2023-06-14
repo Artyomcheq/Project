@@ -84,6 +84,7 @@
                         .elements_card_link {
                             display: flex;
                             align-items: center;
+                            transition: .3s;
                             a {
                                 font-style: normal;
                                 font-weight: 400;
@@ -94,6 +95,12 @@
                             img {
                                 margin-left: 10px;
                             }
+                        }
+                        .elements_card_link:hover {
+                            a {
+                                color: #fd3b39;
+                            }
+                            transform: scale(1.01);
                         }
                     }
                 }
@@ -144,6 +151,11 @@
                 font-size: 17px;
                 line-height: 20px;
                 color: #ffffff;
+            }
+            button:hover {
+                background: #d13333e1;
+                border: 1px solid #ff0000;
+                transition: .3s;
             }
         }
     }
