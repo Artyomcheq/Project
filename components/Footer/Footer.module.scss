@@ -5,6 +5,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         .footer_logo_contacts {
             position: relative;
             display: flex;
@@ -22,7 +23,7 @@
                 font-weight: 400;
                 font-size: 20px;
                 line-height: 24px;
-                transition: .1s;
+                transition: 0.1s;
             }
             a:hover {
                 transform: scale(1.05);
@@ -37,9 +38,10 @@
                 bottom: -60px;
             }
         }
-        .footer_links {
+        .footer_title_links {
             display: flex;
             flex-direction: column;
+            padding: 0 10px;
             h3 {
                 font-style: normal;
                 font-weight: 400;
@@ -48,24 +50,28 @@
                 color: #0e0e0e;
                 padding: 0 0 25px 0;
             }
-            a {
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 41px;
-                color: #343434;
-                transition: .1s;
-            }
-            a:hover {
-                transform: scale(1.05);
-                color: #fd3b39;
+            .footer_links {
+                a {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 41px;
+                    color: #343434;
+                    transition: 0.1s;
+                }
+                a:hover {
+                    transform: scale(1.05);
+                    color: #fd3b39;
+                }
             }
         }
         .footer_help {
             display: flex;
             flex-direction: column;
+            padding: 0 10px;
             h3 {
                 font-style: normal;
                 font-weight: 400;
+                min-width: 190px;
                 font-size: 28px;
                 line-height: 37px;
                 color: #0e0e0e;
@@ -76,7 +82,7 @@
                 font-size: 18px;
                 line-height: 41px;
                 color: #343434;
-                transition: .1s;
+                transition: 0.1s;
             }
             a:hover {
                 transform: scale(1.05);
@@ -128,7 +134,7 @@
                         padding: 17px 21px;
                         border: 2px solid #000000;
                         border-radius: 5px;
-                        transition: .3s;
+                        transition: 0.3s;
                     }
                     input:hover {
                         border: 2px dashed #ff0000;
@@ -147,7 +153,7 @@
                     button:hover {
                         background: #d13333e1;
                         border: 1px solid #ff0000;
-                        transition: .3s;
+                        transition: 0.3s;
                     }
                 }
             }
@@ -159,5 +165,35 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media (max-width: 876px) {
+    .footer {
+        .footer_field {
+            text-align: center;
+            .footer_title_links {
+                width: 20%;
+                align-items: center;
+                
+            }
+            .footer_help {
+                h3 {
+                    font-size: 23px;
+                }
+            }
+            .footer_our_address {
+                margin-left: auto;
+                margin-right: auto;
+                .footer_our_address_subscribe {
+                    .our_address_subscribe_bring {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .footer_copyright {
+            height: 120px;
+        }
     }
 }

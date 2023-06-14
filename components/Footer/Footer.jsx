@@ -22,11 +22,13 @@ const Footer = () => {
               />
             </div>
           </div>
-          <div className={s.footer_links}>
+          <div className={s.footer_title_links}>
             <h3>Links</h3>
             {""}
             {footerLinks.map((item) => (
+              <div className={s.footer_links}>
               <Link key={item.id} href="#">{item.title}</Link>
+              </div>
             ))}
           </div>
           <div className={s.footer_help}>
