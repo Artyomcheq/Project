@@ -39,9 +39,9 @@ const Trust = () => {
           className="trust_swiper"
         >
           {trustCard.map((item) => (
-            <SwiperSlide>
+            <SwiperSlide >
               <div className={s.trust_swiper_card}>
-                <Image src={item.img} width={65} height={65} />
+                <Image key={item.id} src={item.img} width={65} height={65} />
                 <div className={s.trust_swiper_card_title}>
                   <h3>{item.name}</h3>
                   <p>{item.position}</p>
