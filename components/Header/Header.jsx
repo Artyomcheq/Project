@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import s from './header.module.scss';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import s from "./header.module.scss";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,7 +36,16 @@ const Header = () => {
             </button>
           </div>
         </div>
-        <div className={`${s.header_bottom_row} ${menuOpen ? s.show : ''}`}>
+        <motion.div
+          initial="hidden"
+          transition={{ duration: 0.4 }}
+          whileInView="visible"
+          variants={{
+            hidden: { scale: 0 },
+            visible: { scale: 1 },
+          }}
+          className={`${s.header_bottom_row} ${menuOpen ? s.show : ""}`}
+        >
           <div className={s.header_bottom_row_links}>
             <Link href="#">Home</Link>
             <Link href="#">Products</Link>
@@ -48,7 +58,7 @@ const Header = () => {
             <h3>English</h3>
             <button>Sign up</button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
