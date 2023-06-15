@@ -2,6 +2,7 @@ import React from "react";
 import s from "./Hero.module.scss";
 import Image from "next/image";
 import { bottomRowInfo, heroStar } from "@/constans/hero";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Hero = () => {
   return (
@@ -31,7 +32,9 @@ const Hero = () => {
             </p>
             <div className={s.elements_left_btns}>
               <button>Start now</button>
-              <button><span>Read the</span> developer docs</button>
+              <button>
+                <span>Read the</span> developer docs
+              </button>
             </div>
             <div className={s.elements_left_reviews}>
               <h3>4.7</h3>
@@ -57,15 +60,22 @@ const Hero = () => {
         </div>
         <div className={s.hero_bottom_card_position}>
           <div className={s.hero_bottom_card}>
-            {bottomRowInfo.map((item) => (
-              <div key={item.id} className={s.bottom_card_inormation}>
-                <Image src={item.img} width={53} height={53} alt="tick" />
-                <div className={s.bottom_card_inormation_desc}>
-                  <h3>{item.name}</h3>
-                  <p>{item.title}</p>
-                </div>
-              </div>
-            ))}
+            <Swiper
+              slidesPerView={3}
+            >
+              {" "}
+              {bottomRowInfo.map((item) => (
+                <SwiperSlide>
+                  <div key={item.id} className={s.bottom_card_inormation}>
+                    <Image src={item.img} width={53} height={53} alt="tick" />
+                    <div className={s.bottom_card_inormation_desc}>
+                      <h3>{item.name}</h3>
+                      <p>{item.title}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>

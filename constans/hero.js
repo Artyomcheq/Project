@@ -40,4 +40,22 @@ export const bottomRowInfo = [
         name: "Global withdrawals",
         title: "Instant transfer to your bank account",
     },
+    {
+        id: 4,
+        img: "/yellowTick.png",
+        name: "Global withdrawals",
+        title: "Instant transfer to your bank account",
+    },
+    {
+        id: 5,
+        img: "/yellowTick.png",
+        name: "Global withdrawals",
+        title: "Instant transfer to your bank account",
+    },
+    {
+        id: 6,
+        img: "/yellowTick.png",
+        name: "Global withdrawals",
+        title: "Instant transfer to your bank account",
+    },
 ]
