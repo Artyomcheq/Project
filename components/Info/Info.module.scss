@@ -1,7 +1,6 @@
 .info_background {
   background: #e5e5e5;
   height: 1100px;
-  // z-index: -1;
   .info {
     margin-top: 153px;
 
@@ -119,6 +118,7 @@
       box-shadow: 0px 30px 60px rgba(19, 24, 48, 0.0720283);
       border-radius: 15px;
       padding: 10px;
+      // z-index: 1;
       img {
         position: absolute;
         top:-70px;
