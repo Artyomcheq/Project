@@ -168,21 +168,68 @@
     }
 }
 
-@media (max-width: 876px) {
+@media (max-width: 945px) {
     .footer {
         .footer_field {
-            text-align: center;
+            .footer_logo_contacts {
+                h3 {
+                    font-size: 28px;
+                }
+                a {
+                    font-size: 18px;
+                }
+            }
             .footer_title_links {
-                width: 20%;
-                align-items: center;
-                
+                h3 {
+                    font-size: 25px;
+                }
+                .footer_links {
+                    a {
+                        font-size: 16px;
+                    }
+                }
             }
             .footer_help {
                 h3 {
+                    font-size: 25px;
+                }
+                a {
+                    font-size: 16px;
+                }
+            }
+            .footer_our_address {
+                h3 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 16px;
+                }
+                .footer_our_address_subscribe {
+                    h3 {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 876px) {
+    .footer {
+        .footer_field {
+            .footer_title_links {
+                width: 20%;
+                align-items: center;
+            }
+            .footer_help {
+                align-items: center;
+                h3 {
+                    text-align: center;
                     font-size: 23px;
                 }
             }
             .footer_our_address {
+                padding: 20px 0 0 0;
                 margin-left: auto;
                 margin-right: auto;
                 .footer_our_address_subscribe {
@@ -194,6 +241,34 @@
         }
         .footer_copyright {
             height: 120px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .footer {
+        .footer_field {
+            flex-direction: column;
+            .footer_logo_contacts {
+                a:nth-child(2) {
+                    padding: 15px 0;
+                }
+                .footer_logo_contacts_background {
+                    left: -5px;
+                }
+            }
+            .footer_title_links {
+                margin-left: auto;
+                margin-right: auto;
+                h3 {
+                    padding: 15px 0;
+                }
+            }
+            .footer_help {
+                h3 {
+                    padding: 15px 0;
+                }
+            }
         }
     }
 }
