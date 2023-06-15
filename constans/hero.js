@@ -20,3 +20,24 @@ export const heroStar = [
         img: "/Star.png",
     },
 ]
+
+export const bottomRowInfo = [
+    {
+        id: 1,
+        img: "/pinkTick.png",
+        name: "code free setup",
+        title: "One click integration",
+    },
+    {
+        id: 2,
+        img: "/blueTick.png",
+        name: "Lowest Price",
+        title: "transaction fee, lowest in Industry",
+    },
+    {
+        id: 3,
+        img: "/yellowTick.png",
+        name: "Global withdrawals",
+        title: "Instant transfer to your bank account",
+    },
+]

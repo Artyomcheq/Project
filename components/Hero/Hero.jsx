@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./Hero.module.scss";
 import Image from "next/image";
-import { heroStar } from "@/constans/hero";
+import { bottomRowInfo, heroStar } from "@/constans/hero";
 
 const Hero = () => {
   return (
@@ -31,7 +31,7 @@ const Hero = () => {
             </p>
             <div className={s.elements_left_btns}>
               <button>Start now</button>
-              <button>Read the developer docs</button>
+              <button><span>Read the</span> developer docs</button>
             </div>
             <div className={s.elements_left_reviews}>
               <h3>4.7</h3>
@@ -39,7 +39,13 @@ const Hero = () => {
                 <p>top rated on trustpilot</p>
                 <div className={s.left_reviews_rating_stars}>
                   {heroStar.map((item) => (
-                    <Image key={item.id} src={item.img} width={15} height={15} alt="star" />
+                    <Image
+                      key={item.id}
+                      src={item.img}
+                      width={15}
+                      height={15}
+                      alt="star"
+                    />
                   ))}
                 </div>
               </div>
@@ -51,27 +57,15 @@ const Hero = () => {
         </div>
         <div className={s.hero_bottom_card_position}>
           <div className={s.hero_bottom_card}>
-            <div className={s.bottom_card_inormation}>
-              <Image src="/pinkTick.png" width={53} height={53} alt="tick" />
-              <div className={s.bottom_card_inormation_desc}>
-                <h3>code free setup</h3>
-                <p>One click integration</p>
+            {bottomRowInfo.map((item) => (
+              <div key={item.id} className={s.bottom_card_inormation}>
+                <Image src={item.img} width={53} height={53} alt="tick" />
+                <div className={s.bottom_card_inormation_desc}>
+                  <h3>{item.name}</h3>
+                  <p>{item.title}</p>
+                </div>
               </div>
-            </div>
-            <div className={s.bottom_card_inormation}>
-              <Image src="/blueTick.png" width={53} height={53} alt="tick" />
-              <div className={s.bottom_card_inormation_desc}>
-                <h3>Lowest Price</h3>
-                <p>transaction fee, lowest in Industry</p>
-              </div>
-            </div>
-            <div className={s.bottom_card_inormation}>
-              <Image src="/yellowTick.png" width={53} height={53} alt="tick" />
-              <div className={s.bottom_card_inormation_desc}>
-                <h3>Global withdrawals</h3>
-                <p>Instant transfer to your bank account</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

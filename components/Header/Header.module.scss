@@ -77,6 +77,7 @@
                     color: #ff3f3f;
                 }
             }
+
             .top_row_contacts_number {
                 display: flex;
                 align-items: center;
@@ -97,6 +98,14 @@
                 transform: scale(1.05);
                 a {
                     color: #ff3f3f;
+                }
+            }
+            button {
+                display: none;
+                position: relative;
+                div {
+                    border-top: solid 2px #000000;
+                    width: 20px;
                 }
             }
         }
@@ -339,9 +348,15 @@
 }
 @media (max-width: 690px) {
     .header {
+        .header_top_row {
+            .header_top_row_contacts {
+                button {
+                    display: block;
+                }
+            }
+        }
         .header_bottom_row {
-            flex-direction: column-reverse;
-            align-items: center;
+            display: none;
             .header_bottom_row_links {
                 width: 100%;
             }
@@ -349,6 +364,10 @@
                 width: 40%;
                 padding: 20px 0 0 0;
             }
+        }
+        .show {
+            display: block;
+            opacity: 1;
         }
     }
 }

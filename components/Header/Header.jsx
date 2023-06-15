@@ -1,9 +1,15 @@
-import React from "react";
-import s from "./Header.module.scss";
-import Image from "next/image";
-import Link from "next/link";
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import s from './header.module.scss';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="container">
       <div className={s.header}>
@@ -24,9 +30,12 @@ const Header = () => {
               <Image src="/loop.png" alt="loop" width={15} height={15} />
               <a href="#">(000) 888-88</a>
             </div>
+            <button onClick={toggleMenu}>
+              <div></div>
+            </button>
           </div>
         </div>
-        <div className={s.header_bottom_row}>
+        <div className={`${s.header_bottom_row} ${menuOpen ? s.show : ''}`}>
           <div className={s.header_bottom_row_links}>
             <Link href="#">Home</Link>
             <Link href="#">Products</Link>
