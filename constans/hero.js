@@ -26,7 +26,7 @@ export const bottomRowInfo = [
         id: 1,
         img: "/pinkTick.png",
         name: "code free setup",
-        title: "One click integration",
+        title: "Instant transfer to your bank account",
     },
     {
         id: 2,
@@ -42,13 +42,13 @@ export const bottomRowInfo = [
     },
     {
         id: 4,
-        img: "/yellowTick.png",
+        img: "/pinkTick.png",
         name: "Global withdrawals",
-        title: "Instant transfer to your bank account",
+        title: "transaction fee, lowest in Industry",
     },
     {
         id: 5,
-        img: "/yellowTick.png",
+        img: "/blueTick.png",
         name: "Global withdrawals",
         title: "Instant transfer to your bank account",
     },
@@ -56,6 +56,6 @@ export const bottomRowInfo = [
         id: 6,
         img: "/yellowTick.png",
         name: "Global withdrawals",
-        title: "Instant transfer to your bank account",
+        title: "transaction fee, lowest in Industry",
     },
 ]

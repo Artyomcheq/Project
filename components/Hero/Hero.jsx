@@ -3,6 +3,10 @@ import s from "./Hero.module.scss";
 import Image from "next/image";
 import { bottomRowInfo, heroStar } from "@/constans/hero";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { Autoplay } from "swiper";
 
 const Hero = () => {
   return (
@@ -61,7 +65,27 @@ const Hero = () => {
         <div className={s.hero_bottom_card_position}>
           <div className={s.hero_bottom_card}>
             <Swiper
-              slidesPerView={3}
+            slidesPerView={3}
+            spaceBetween={30}
+            loop
+            speed={1100}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              1009: {
+                slidesPerView: 3,
+              },
+              510: {
+                slidesPerView: 2,
+              },
+              320: {
+                slidesPerView: 1
+              }
+              
+            }}
+            modules={[Autoplay]}
             >
               {" "}
               {bottomRowInfo.map((item) => (

@@ -177,7 +177,6 @@
     .hero {
         .hero_bottom_card_position {
             .hero_bottom_card {
-                padding: 30px 15px;
                 .bottom_card_inormation {
                     .bottom_card_inormation_desc {
                         h3 {
@@ -209,7 +208,6 @@
         }
         .hero_bottom_card_position {
             .hero_bottom_card {
-                padding: 30px 5px;
                 .bottom_card_inormation {
                     .bottom_card_inormation_desc {
                         h3 {
@@ -219,22 +217,6 @@
                             font-size: 17px;
                         }
                     }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 695px) {
-    .hero {
-        .hero_bottom_card_position {
-            .hero_bottom_card {
-                flex-direction: column;
-                width: 41%;
-                padding: 5px 20px;
-                bottom: -220px;
-                .bottom_card_inormation {
-                    padding: 15px 0;
                 }
             }
         }
@@ -259,11 +241,6 @@
                 opacity: 0.3;
             }
         }
-        .hero_bottom_card_position {
-            .hero_bottom_card {
-                width: 60%;
-            }
-        }
     }
 }
 
@@ -283,21 +260,6 @@
             }
             .hero_element_right {
                 opacity: 0.2;
-            }
-        }
-        .hero_bottom_card_position {
-            .hero_bottom_card {
-                width: 70%;
-            }
-        }
-    }
-}
-
-@media (max-width: 400px) {
-    .hero {
-        .hero_bottom_card_position {
-            .hero_bottom_card {
-                width: 100%;
             }
         }
     }
