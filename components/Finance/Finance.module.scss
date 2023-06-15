@@ -55,7 +55,6 @@
                 justify-content: space-between;
                 width: 100%;
                 .finance_elements_card {
-                    width: 31%;
                     .finance_elements_card_background {
                         height: 250px;
                         background: #d0d0d0;
@@ -84,7 +83,7 @@
                         .elements_card_link {
                             display: flex;
                             align-items: center;
-                            transition: .3s;
+                            transition: 0.3s;
                             a {
                                 font-style: normal;
                                 font-weight: 400;
@@ -155,7 +154,87 @@
             button:hover {
                 background: #d13333e1;
                 border: 1px solid #ff0000;
-                transition: .3s;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+@media (max-width: 1135px) {
+    .finance {
+        .finanse_elements_all {
+            .finance_bottom_row {
+                .finance_bottom_row_title {
+                    .bottom_row_title_general {
+                        h3 {
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1005px) {
+    .finance {
+        .finanse_elements_all {
+            .finance_bottom_row {
+                .finance_bottom_row_title {
+                    .bottom_row_title_general {
+                        h3 {
+                            font-size: 35px;
+                        }
+                        img {
+                            left: 80px;
+                            top: -10px;
+                            width: 30%;
+                            height: 90%;
+                        }
+                    }
+                }
+                button {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 863px) {
+    .finance {
+        .finanse_elements_all {
+            .finance_bottom_row {
+                button {
+                    padding: 5px 20px;
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .finance {
+        .finanse_elements_all {
+            .finance_bottom_row {
+                padding: 40px 55px;
+                bottom: -170px;
+                .finance_bottom_row_title {
+                    p {
+                        font-size: 18px;
+                    }
+                    .bottom_row_title_general {
+                        h3 {
+                            font-size: 28px;
+                        }
+                        img {
+                            left: 60px;
+                            width: 27%;
+                        }
+                    }
+                }
             }
         }
     }

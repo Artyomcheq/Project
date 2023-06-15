@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import { trustCard } from "@/constans/trustSwiper";
 
 const Trust = () => {
@@ -51,9 +51,13 @@ const Trust = () => {
               slidesPerView: 1.0,
             },
           }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           slidesPerView={2}
           speed={700}
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           centeredSlides={true}
           centeredSlidesBounds={true}
           className="trust_swiper"

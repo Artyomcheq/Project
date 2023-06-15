@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import s from "./Finance.module.scss";
 import { financeCard } from "@/constans/financeCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { Autoplay } from "swiper";
 
 const Finance = () => {
   return (
@@ -31,8 +36,33 @@ const Finance = () => {
               </div>
             </div>
             <div className={s.finance_elements_cards}>
+            <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            loop
+            speed={1100}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              1000: {
+                slidesPerView: 3,
+              },
+              600: {
+                slidesPerView: 2,
+              },
+              320: {
+                slidesPerView: 1
+              }
+              
+            }}
+            modules={[Autoplay]}
+            >
+              {" "}
               {financeCard.map((item) => (
-                <div key={item.id} className={s.finance_elements_card}>
+                <SwiperSlide>
+                  <div key={item.id} className={s.finance_elements_card}>
                   <div className={s.finance_elements_card_background}></div>
                   <div className={s.finance_elements_card_desc}>
                     <p>{item.date}</p>
@@ -50,7 +80,9 @@ const Finance = () => {
                     </div>
                   </div>
                 </div>
+                </SwiperSlide>
               ))}
+            </Swiper>
             </div>
           </div>
           <div className={s.finance_bottom_row}>
@@ -66,7 +98,7 @@ const Finance = () => {
               </div>
               <p>Ut vel sapien molestie, accumsan dui eu, imperdiet nulla.</p>
             </div>
-            <button>Create an account</button>
+            <button>Create <span>an account</span></button>
           </div>
         </div>
       </div>
