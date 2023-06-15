@@ -31,6 +31,26 @@ const Trust = () => {
             prevEl: ".swiper-button-prev",
             nextEl: ".swiper-button-next",
           }}
+          breakpoints={{
+            1200: {
+              slidesPerView: 2,
+            },
+            1000: {
+              slidesPerView: 1.7,
+            },
+            800: {
+              slidesPerView: 1.4,
+            },
+            700: {
+              slidesPerView: 1.4,
+            },
+            600: {
+              slidesPerView: 1.2,
+            },
+            320: {
+              slidesPerView: 1.0,
+            },
+          }}
           slidesPerView={2}
           speed={700}
           modules={[Navigation]}
