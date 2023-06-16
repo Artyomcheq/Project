@@ -1,7 +1,7 @@
 export const info = [
   {
     id: 1,
-    title: "Maecenas tincidunt lacus at velit.",
+    title: "Maecenas incident laces at velit.",
     text:"Lorem ippsum dolor sit amet"
   },
   {
