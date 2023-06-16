@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import s from "./header.module.scss";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,29 +36,31 @@ const Header = () => {
             </button>
           </div>
         </div>
-        <motion.div
-          initial="hidden"
-          transition={{ duration: 0.4 }}
-          whileInView="visible"
-          variants={{
-            hidden: { scale: 0 },
-            visible: { scale: 1 },
-          }}
-          className={`${s.header_bottom_row} ${menuOpen ? s.show : ""}`}
-        >
-          <div className={s.header_bottom_row_links}>
-            <Link href="#">Home</Link>
-            <Link href="#">Products</Link>
-            <Link href="#">Pages</Link>
-            <Link href="#">Blog</Link>
-            <Link href="#">Contact us</Link>
-          </div>
-          <div className={s.header_bottom_row_btn}>
-            <Image src="/globus.png" alt="globus" width={20} height={20} />
-            <h3>English</h3>
-            <button>Sign up</button>
-          </div>
-        </motion.div>
+        <AnimatePresence>
+          <motion.div
+            initial="hidden"
+            transition={{ duration: 0.4 }}
+            whileInView="visible"
+            variants={{
+              hidden: { scale: 0 },
+              visible: { scale: 1 },
+            }}
+            className={`${s.header_bottom_row} ${menuOpen ? s.show : ""}`}
+          >
+            <div className={s.header_bottom_row_links}>
+              <Link href="#">Home</Link>
+              <Link href="#">Products</Link>
+              <Link href="#">Pages</Link>
+              <Link href="#">Blog</Link>
+              <Link href="#">Contact us</Link>
+            </div>
+            <div className={s.header_bottom_row_btn}>
+              <Image src="/globus.png" alt="globus" width={20} height={20} />
+              <h3>English</h3>
+              <button>Sign up</button>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
