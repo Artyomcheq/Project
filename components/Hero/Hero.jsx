@@ -77,7 +77,7 @@ const Hero = () => {
               1009: {
                 slidesPerView: 3,
               },
-              510: {
+              595: {
                 slidesPerView: 2,
               },
               320: {

@@ -229,12 +229,12 @@
             .hero_elements_left {
                 .elements_left_title {
                     h1 {
-                        font-size: 55px;
+                        font-size: 45px;
                         line-height: 80px;
                     }
                     img {
-                        top: 70px;
-                        width: 40%;
+                        top: 80px;
+                        width: 41%;
                     }
                 }
             }
@@ -254,7 +254,7 @@
                         font-size: 45px;
                     }
                     img {
-                        top: 80px;
+                        top: 70px;
                         width: 60%;
                     }
                 }
@@ -273,10 +273,10 @@
             .hero_elements_left {
                 .elements_left_title {
                     h1 {
-                        font-size: 45px;
+                        font-size: 40px;
                     }
                     img {
-                        top: 90px;
+                        top: 80px;
                         left: 0;
                         width: 70%;
                         height: 40%;
@@ -309,10 +309,15 @@
             .hero_elements_left {
                 .elements_left_title {
                     h1 {
-                        font-size: 40px;
+                        font-size: 38px;
                     }
                 }
-            }
+            }  
         }
+        .hero_bottom_card_position {
+                .hero_bottom_card {
+                    padding: 40px;
+                }
+            }
     }
 }
