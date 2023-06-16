@@ -6,12 +6,31 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import { trustCard } from "@/constans/trustSwiper";
+import { motion } from "framer-motion";
 
 const Trust = () => {
+  const textAnimation = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+
   return (
     <div className={s.trust}>
       <div className={s.trust_title}>
-        <div className={s.trust_title_general}>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          custom={1}
+          variants={textAnimation}
+          className={s.trust_title_general}
+        >
           <h3>Don’t trust us. Trust the industry leaders</h3>
           <Image
             src="/trustShape.png"
@@ -19,10 +38,16 @@ const Trust = () => {
             height={94}
             alt="trustShape"
           />
-        </div>
-        <div className={s.trust_title_second}>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          custom={2}
+          variants={textAnimation}
+          className={s.trust_title_second}
+        >
           <p>See what are users are saying about our services and support</p>
-        </div>
+        </motion.div>
       </div>
       <div className={s.trust_swiper}>
         <Swiper
@@ -63,7 +88,7 @@ const Trust = () => {
           className="trust_swiper"
         >
           {trustCard.map((item) => (
-            <SwiperSlide >
+            <SwiperSlide>
               <div className={s.trust_swiper_card}>
                 <Image key={item.id} src={item.img} width={65} height={65} />
                 <div className={s.trust_swiper_card_title}>
