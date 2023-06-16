@@ -7,8 +7,30 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+  const textAnimation = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    hiddenBottom: {
+      y: 100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+    visibleBottom: (customBottom) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: customBottom * 0.1 },
+    }),
+  };
+
   return (
     <div className="container">
       <div className={s.hero}>
@@ -22,7 +44,13 @@ const Hero = () => {
         </div>
         <div className={s.hero_elements}>
           <div className={s.hero_elements_left}>
-            <div className={s.elements_left_title}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              custom={1}
+              variants={textAnimation}
+              className={s.elements_left_title}
+            >
               <h1>Start accepting payments in 3 minutes</h1>
               <Image
                 src="/heroShape.png"
@@ -30,17 +58,34 @@ const Hero = () => {
                 height={168}
                 alt="heroShape"
               />
-            </div>
-            <p>
+            </motion.div>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              custom={2}
+              variants={textAnimation}
+            >
               Integrate xyz payment gateway without any technical knowledge.{" "}
-            </p>
-            <div className={s.elements_left_btns}>
+            </motion.p>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              custom={4}
+              variants={textAnimation}
+              className={s.elements_left_btns}
+            >
               <button>Start now</button>
               <button>
                 <span>Read the</span> developer docs
               </button>
-            </div>
-            <div className={s.elements_left_reviews}>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              custom={4}
+              variants={textAnimation}
+              className={s.elements_left_reviews}
+            >
               <h3>4.7</h3>
               <div className={s.elements_left_reviews_rating}>
                 <p>top rated on trustpilot</p>
@@ -56,36 +101,55 @@ const Hero = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
-          <div className={s.hero_element_right}>
+          <motion.div
+            layout
+            transition={{
+              opacity: 0.5,
+              layout: { duration: 0.8 },
+              duration: 0.8,
+            }}
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden: { scale: 0 },
+              visible: { scale: 1 },
+            }}
+            className={s.hero_element_right}
+          >
             <Image src="/heroImg.png" height={500} width={550} alt="heroImg" />
-          </div>
+          </motion.div>
         </div>
         <div className={s.hero_bottom_card_position}>
-          <div className={s.hero_bottom_card}>
+          <motion.div
+            initial="hiddenBottom"
+            whileInView="visibleBottom"
+            customBottom={1}
+            variants={textAnimation}
+            className={s.hero_bottom_card}
+          >
             <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            loop
-            speed={1100}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-              1009: {
-                slidesPerView: 3,
-              },
-              595: {
-                slidesPerView: 2,
-              },
-              320: {
-                slidesPerView: 1
-              }
-              
-            }}
-            modules={[Autoplay]}
+              slidesPerView={3}
+              spaceBetween={30}
+              loop
+              speed={1100}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                1009: {
+                  slidesPerView: 3,
+                },
+                595: {
+                  slidesPerView: 2,
+                },
+                320: {
+                  slidesPerView: 1,
+                },
+              }}
+              modules={[Autoplay]}
             >
               {" "}
               {bottomRowInfo.map((item) => (
@@ -100,7 +164,7 @@ const Hero = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
