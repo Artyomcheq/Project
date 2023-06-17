@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import s from "./header.module.scss";
@@ -10,6 +10,22 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 741) {
+        setMenuOpen(true);
+      } else if (window.innerWidth < 741) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="container">
@@ -37,29 +53,31 @@ const Header = () => {
           </div>
         </div>
         <AnimatePresence>
-          <motion.div
-            initial="hidden"
-            transition={{ duration: 0.4 }}
-            whileInView="visible"
-            variants={{
-              hidden: { scale: 0 },
-              visible: { scale: 1 },
-            }}
-            className={`${s.header_bottom_row} ${menuOpen ? s.show : ""}`}
-          >
-            <div className={s.header_bottom_row_links}>
-              <Link href="#">Home</Link>
-              <Link href="#">Products</Link>
-              <Link href="#">Pages</Link>
-              <Link href="#">Blog</Link>
-              <Link href="#">Contact us</Link>
-            </div>
-            <div className={s.header_bottom_row_btn}>
-              <Image src="/globus.png" alt="globus" width={20} height={20} />
-              <h3>English</h3>
-              <button>Sign up</button>
-            </div>
-          </motion.div>
+          {menuOpen && (
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
+              }}
+              className={`${s.header_bottom_row} ${menuOpen ? s.show : ""}`}
+            >
+              <div className={s.header_bottom_row_links}>
+                <Link href="#">Home</Link>
+                <Link href="#">Products</Link>
+                <Link href="#">Pages</Link>
+                <Link href="#">Blog</Link>
+                <Link href="#">Contact us</Link>
+              </div>
+              <div className={s.header_bottom_row_btn}>
+                <Image src="/globus.png" alt="globus" width={20} height={20} />
+                <h3>English</h3>
+                <button>Sign up</button>
+              </div>
+            </motion.div>
+          )}
         </AnimatePresence>
       </div>
     </div>
