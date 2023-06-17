@@ -15,10 +15,12 @@ const Header = () => {
     const handleResize = () => {
       if (window.innerWidth > 741) {
         setMenuOpen(true);
-      } else if (window.innerWidth < 741) {
+      } else {
         setMenuOpen(false);
       }
     };
+
+    handleResize();
 
     window.addEventListener("resize", handleResize);
 
