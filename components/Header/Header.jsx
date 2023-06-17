@@ -5,29 +5,29 @@ import s from "./header.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen(!menuOpen)
   };
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 741) {
-        setMenuOpen(true);
+        setMenuOpen(true)
       } else {
-        setMenuOpen(false);
+        setMenuOpen(false)
       }
-    };
+    }
 
-    handleResize();
+    handleResize()
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize)
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   return (
     <div className="container">
