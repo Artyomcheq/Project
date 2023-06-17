@@ -108,9 +108,44 @@
                     width: 27px;
                     height: 2px;
                     border-radius: 1px;
+                    position: relative;
+
                 }
-                .header_burger_line:nth-child(2) {
-                    margin: 7px 0;
+
+                .header_burger_line::before,
+                .header_burger_line::after {
+                    content: "";
+                    position: absolute;
+                    width: 27px;
+                    left: 0;
+                    height: 100%;
+                    background-color: #000000;
+                }
+
+                .header_burger_line::before {
+                    top: -7px;
+                    transition: .3s;
+                }
+
+                .header_burger_line::after {
+                    bottom: -7px;
+                    transition: .3s;
+                }
+                .burger_line_rotate {
+                    transition: .1s;
+                    background-color: #ffffff00;
+                }
+                .burger_line_rotate::before {
+                    transform: rotate(45deg);
+                    top: 0;
+                    transition: .3s;
+                    background-color: #ff3f3f;
+                }
+                .burger_line_rotate::after {
+                    transform: rotate(-45deg);
+                    bottom: 0;
+                    transition: .3s;
+                    background-color: #ff3f3f;
                 }
             }
         }
