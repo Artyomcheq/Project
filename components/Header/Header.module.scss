@@ -103,9 +103,14 @@
             button {
                 display: none;
                 position: relative;
-                div {
-                    border-top: solid 2px #000000;
-                    width: 20px;
+                .header_burger_line {
+                    background-color: #000000;
+                    width: 27px;
+                    height: 2px;
+                    border-radius: 1px;
+                }
+                .header_burger_line:nth-child(2) {
+                    margin: 7px 0;
                 }
             }
         }
@@ -421,6 +426,9 @@
                     padding: 20px 0 0 0;
                 }
                 .top_row_contacts_number {
+                    padding: 20px 0 0 0;
+                }
+                button {
                     padding: 20px 0 0 0;
                 }
             }
