@@ -2,14 +2,43 @@ import React from "react";
 import s from "./Info.module.scss";
 import Image from "next/image";
 import { info } from "../constans/Info";
+import { motion } from "framer-motion";
+
+const textAnimation = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: (custom) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
+
+const textAnimationtop = {
+  hidden: {
+    y: -100,
+    opacity: 0,
+  },
+  hidden: {
+    y: -100,
+    opacity: 0,
+  },
+  visible: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
 
 const Info = () => {
   return (
     <div className={s.info_background}>
       <div className="container">
-        <div className={s.info}>
-          <div className={s.info_block}>
-            <Image src="/info-oval.png" alt="oval" width={317} height={86}/>
+        <motion.div initial="hidden" whileInView="visible" className={s.info}>
+          <motion.div variants={textAnimation} custom={2} className={s.info_block}>
+            <Image src="/info-oval.png" alt="oval" width={317} height={86} />
             <div className={s.block_des}>
               <div>
                 <h3 className={s.block_des__title}>
@@ -33,9 +62,9 @@ const Info = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className={s.info_login}>
+          <motion.div variants={textAnimation} custom={3} className={s.info_login}>
             <Image src="/info-green.png" alt="green" width={135} height={125} />
             <div className={s.info_login__register}>
               <div className={s.register_block}>
@@ -66,12 +95,14 @@ const Info = () => {
                 amet sint. Velit officia consequat.
               </p>
               <p className={s.text_number__text}>
-                Feel free to contact us here 
+                Feel free to contact us here
               </p>
-                  <p className={s.text_number}>Call: <span> 1.888.888.888</span></p>
+              <p className={s.text_number}>
+                Call: <span> 1.888.888.888</span>
+              </p>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

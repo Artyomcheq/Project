@@ -1,12 +1,50 @@
 import React from "react";
 import s from "./About.module.scss";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const textAnimation = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: (custom) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
+
+const textAnimationtop = {
+  hidden: {
+    y: -100,
+    opacity: 0,
+  },
+  hidden: {
+    y: -100,
+    opacity: 0,
+  },
+  visible: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
 
 const About = () => {
   return (
     <div className="container">
-      <div className={s.about}>
-        <div className={s.about_titels}>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={textAnimation}
+        className={s.about}
+      >
+        <motion.div
+          variants={textAnimationtop}
+          custom={3}
+          className={s.about_titels}
+        >
           <h2 className={s.about_titels__title}>
             {" "}
             <span>20000+ </span> trusted by thousands of sellers
@@ -22,7 +60,7 @@ const About = () => {
             Your money and customer data is in safe hand. Best in class security
             and encryption.
           </p>
-        </div>
+        </motion.div>
         <div className={s.about_cards}>
           <div className={s.about_cards__card}>
             <h3 className={s.about_cards__card_title}>
@@ -55,8 +93,12 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className={s.about_info}>
-          <div className={s.about_info__number}>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          className={s.about_info}
+        >
+          <motion.div variants={textAnimation} custom={2} className={s.about_info__number}>
             <div className={s.about_info__number_set}>
               <h2 className={s.set_title}>2300+</h2>
               <p className={s.set_text}>Sellers</p>
@@ -69,8 +111,8 @@ const About = () => {
               <h2 className={s.set_title}>12b+</h2>
               <p className={s.set_text}>Sellers</p>
             </div>
-          </div>
-          <div className={s.about_info__text}>
+          </motion.div>
+          <motion.div variants={textAnimation} custom={1} className={s.about_info__text}>
             <Image src="/about-oval.png" alt="oval" width={219} height={101} />
             <h2 className={s.title}>Another money heading goes here</h2>
             <p className={s.text}>
@@ -80,9 +122,9 @@ const About = () => {
               prisoners fist fighting to use them.
             </p>
             <button className={s.btn}>Sign up now</button>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
