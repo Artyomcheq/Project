@@ -2,18 +2,52 @@ import React from "react";
 import s from "./Description.module.scss";
 import Image from "next/image";
 import { description } from "../constans/Description";
+import { motion } from "framer-motion";
+
+const textAnimation = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: custom => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.1}
+  }),
+};
+
+const textAnimationtop = {
+  hidden: {
+    y: -100,
+    opacity: 0,
+  },
+  hidden: {
+    y: -100,
+    opacity: 0,
+  },
+  visible: custom => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * .4}
+  }),
+};
 const Description = () => {
+
+  
   return (
-    <div className={s.description}>
+    <motion.div
+    initial="hidden"
+    whileInView="visible"
+    className={s.description}>
       <div className="container">
         <div className={s.description_des}>
-          <h2 className={s.description_des_title}>
+          <motion.h2 variants={textAnimationtop} className={s.description_des_title}>
             Accepting payments should not be hard
-          </h2>
-          <p className={s.description_des_text}>
+          </motion.h2>
+          <motion.p variants={textAnimation} custom={1} className={s.description_des_text}>
             Acccept payment using invoice, quick checkout, API’s and payment
             buttons
-          </p>
+          </motion.p>
           <Image
             src="/description-shape.png"
             alt="shape"
@@ -26,37 +60,37 @@ const Description = () => {
           <Image className={s.cards_blue} src="/description-blue.png" alt="blue" width={50} height={45} />
           <Image className={s.cards_green} src="/description-green .png" alt="green" width={134} height={123} />
           {description.map((description) => (
-            <div key={description.id} className={s.cards_card}>
-              <div className={s.cards__card_img}>
+            <motion.div variants={textAnimation} custom={2}  key={description.id} className={s.cards_card}>
+              <motion.div variants={textAnimation} custom={3} className={s.cards__card_img}>
                 <Image
                   src={description.img}
                   width={324}
                   height={320}
                   alt="icon"
                 />
-              </div>
+              </motion.div>
               <div className={s.cards_card_text}>
-                <h2 className={s.cards_card_text__title}>{description.title}</h2>
-                <p className={s.cards_card_text__set}>{description.text}</p>
-                <p className={s.cards_card_text__des}>{description.destext}</p>
-                <p className={s.cards_card_strela}>
+                <motion.h2 variants={textAnimation} custom={4} className={s.cards_card_text__title}>{description.title}</motion.h2>
+                <motion.p variants={textAnimation} custom={5} className={s.cards_card_text__set}>{description.text}</motion.p>
+                <motion.p variants={textAnimation} custom={6} className={s.cards_card_text__des}>{description.destext}</motion.p>
+                <motion.p variants={textAnimation} custom={7} className={s.cards_card_strela}>
                   <Image
                     src={description.imgstrela}
                     width={24}
                     height={10}
                     alt="strela"
                   ></Image>
-                </p>
+                </motion.p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-        <div className={s.description_bottom__title}>
-          <h2 className={s.description_bottom__title_text}>Having issues with integration and setup</h2>
-          <button className={s.description_bottom__title_btn}>Let us know</button>
-        </div>
+        <motion.div variants={textAnimationtop} custom={1}  className={s.description_bottom__title}>
+          <motion.h2 variants={textAnimationtop} custom={2} className={s.description_bottom__title_text}>Having issues with integration and setup</motion.h2>
+          <motion.button variants={textAnimationtop} custom={3} className={s.description_bottom__title_btn}>Let us know</motion.button>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
