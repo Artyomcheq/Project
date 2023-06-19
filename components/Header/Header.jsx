@@ -61,9 +61,7 @@ const Header = () => {
             <a href="#">(000) 888-88</a>
           </div>
           <button onClick={toggleMenu}>
-            <div className={s.header_burger_line}></div>
-            <div className={s.header_burger_line}></div>
-            <div className={s.header_burger_line}></div>
+            <div className={`${s.header_burger_line} ${menuOpen ? s.burger_line_rotate : ""}`}></div>
           </button>
         </div>
       </div>
