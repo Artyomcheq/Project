@@ -286,6 +286,11 @@
 @media (max-width: 1190px) {
     .header {
         width: 99%;
+        .header_bottom_row {
+            .header_bottom_row_btn {
+                width: 25%;
+            }
+        }
     }
 }
 @media (max-width: 1105px) {
