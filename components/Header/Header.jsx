@@ -52,9 +52,7 @@ const Header = () => {
             </div>
             <button onClick={toggleMenu}>
               <div
-                className={`${s.header_burger_line} ${
-                  menuOpen ? s.burger_line_rotate : ""
-                }`}
+                className={`${s.header_burger_line} ${menuOpen ? s.burger_line_rotate : ""}`}
               ></div>
             </button>
           </div>
@@ -91,12 +89,7 @@ const Header = () => {
                 <h3>English</h3>
                 <button>
                   Sign up
-                  <Image
-                    src="/btnArrow.png"
-                    width={5}
-                    height={8}
-                    alt="btnArrow"
-                  />
+                  <Image src="/btnArrow.png" width={5} height={8} alt="btnArrow" />
                 </button>
               </motion.div>
             </motion.div>

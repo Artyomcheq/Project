@@ -8,19 +8,19 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper";
 import { motion } from "framer-motion";
-import { hiddenAnimation, hiddenBottomAnimation, visibleAnimation, visibleBottomAnimation, } from "@/constans/animation";
+import {
+  hiddenAnimation,
+  hiddenBottomAnimation,
+  visibleAnimation,
+  visibleBottomAnimation,
+} from "@/constans/animation";
 
 const Hero = () => {
   return (
     <div className="container">
       <div className={s.hero}>
         <div className={s.hero_background}>
-          <Image
-            src="/heroBackground.png"
-            alt="background"
-            width={2000}
-            height={1100}
-          />
+          <Image src="/heroBackground.png" alt="background" width={2000} height={1100} />
         </div>
         <div className={s.hero_elements}>
           <div className={s.hero_elements_left}>
@@ -30,17 +30,9 @@ const Hero = () => {
               className={s.elements_left_title}
             >
               <h1>Start accepting payments in 3 minutes</h1>
-              <Image
-                src="/heroShape.png"
-                width={416}
-                height={168}
-                alt="heroShape"
-              />
+              <Image src="/heroShape.png" width={416} height={168} alt="heroShape" />
             </motion.div>
-            <motion.p
-              initial={hiddenAnimation}
-              whileInView={visibleAnimation(2)}
-            >
+            <motion.p initial={hiddenAnimation} whileInView={visibleAnimation(2)}>
               Integrate xyz payment gateway without any technical knowledge.{" "}
             </motion.p>
             <motion.div
@@ -63,13 +55,7 @@ const Hero = () => {
                 <p>top rated on trustpilot</p>
                 <div className={s.left_reviews_rating_stars}>
                   {heroStar.map((item) => (
-                    <Image
-                      key={item.id}
-                      src={item.img}
-                      width={15}
-                      height={15}
-                      alt="star"
-                    />
+                    <Image key={item.id} src={item.img} width={15} height={15} alt="star" />
                   ))}
                 </div>
               </div>

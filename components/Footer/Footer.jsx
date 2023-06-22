@@ -14,12 +14,7 @@ const Footer = () => {
             <a href="#">support@9.com</a>
             <a href="#">+888-888-88</a>
             <div className={s.footer_logo_contacts_background}>
-              <Image
-                src="/footerCircle.png"
-                width={145}
-                height={123}
-                alt="footerCircle"
-              />
+              <Image src="/footerCircle.png" width={145} height={123} alt="footerCircle" />
             </div>
           </div>
           <div className={s.footer_title_links}>
@@ -27,14 +22,18 @@ const Footer = () => {
             {""}
             {footerLinks.map((item) => (
               <div className={s.footer_links}>
-              <Link key={item.id} href="#">{item.title}</Link>
+                <Link key={item.id} href="#">
+                  {item.title}
+                </Link>
               </div>
             ))}
           </div>
           <div className={s.footer_help}>
             <h3>Help & Support</h3>
             {footerHelp.map((item) => (
-              <Link key={item.id} href="#">{item.title}</Link>
+              <Link key={item.id} href="#">
+                {item.title}
+              </Link>
             ))}
           </div>
           <div className={s.footer_our_address}>
@@ -42,28 +41,13 @@ const Footer = () => {
             <p>4517 Washington Ave. Manchester, Kentucky 39495</p>
             <div className={s.footer_our_address_socials}>
               <a href="#">
-                <Image
-                  src="/facebook.png"
-                  width={9}
-                  height={17}
-                  alt="facebook"
-                />
+                <Image src="/facebook.png" width={9} height={17} alt="facebook" />
               </a>
               <a href="#">
-                <Image
-                  src="/twitter.png"
-                  width={19}
-                  height={15}
-                  alt="twitter"
-                />
+                <Image src="/twitter.png" width={19} height={15} alt="twitter" />
               </a>
               <a href="#">
-                <Image
-                  src="/linkedin.png"
-                  width={18}
-                  height={18}
-                  alt="linkedin"
-                />
+                <Image src="/linkedin.png" width={18} height={18} alt="linkedin" />
               </a>
               <a href="#">
                 <Image src="/google.png" width={26} height={15} alt="google" />

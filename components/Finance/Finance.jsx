@@ -26,10 +26,7 @@ const Finance = () => {
         <div className={s.finanse_elements_all}>
           <div className={s.finance_elements}>
             <div className={s.finance_elements_title}>
-              <motion.p
-                initial={hiddenAnimation}
-                whileInView={visibleAnimation(1)}
-              >
+              <motion.p initial={hiddenAnimation} whileInView={visibleAnimation(1)}>
                 News & Updates
               </motion.p>
               <motion.div
@@ -38,12 +35,7 @@ const Finance = () => {
                 className={s.finance_elements_title_general}
               >
                 <h3>We talk about finance</h3>
-                <Image
-                  src="/trustShape.png"
-                  width={140}
-                  height={90}
-                  alt="trustShape"
-                />
+                <Image src="/trustShape.png" width={140} height={90} alt="trustShape" />
               </motion.div>
             </div>
             <div className={s.finance_elements_cards}>
@@ -90,12 +82,7 @@ const Finance = () => {
                         <div className={s.elements_card_link}>
                           <Link href="#">
                             {item.link}
-                            <Image
-                              src={item.arrow}
-                              width={5}
-                              height={8}
-                              alt="arrow"
-                            />
+                            <Image src={item.arrow} width={5} height={8} alt="arrow" />
                           </Link>
                         </div>
                       </div>
@@ -113,19 +100,11 @@ const Finance = () => {
             >
               <div className={s.bottom_row_title_general}>
                 <h3>Your payment is just a click away</h3>
-                <Image
-                  src="/heroShape.png"
-                  width={226}
-                  height={90}
-                  alt="heroShape"
-                />
+                <Image src="/heroShape.png" width={226} height={90} alt="heroShape" />
               </div>
               <p>Ut vel sapien molestie, accumsan dui eu, imperdiet nulla.</p>
             </motion.div>
-            <motion.button
-              initial={hiddenAnimation}
-              whileInView={visibleAnimation(1)}
-            >
+            <motion.button initial={hiddenAnimation} whileInView={visibleAnimation(1)}>
               Create <span>an account</span>
             </motion.button>
           </div>
