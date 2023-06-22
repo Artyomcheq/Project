@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Description from '@/components/Description/Description'
 import Info from '@/components/Info/Info'
 import About from '@/components/About/About'
+import Xzzz from '@/components/Info/xzzzz'
 
 const inter = Inter({ subsets: ['latin'] })
 
