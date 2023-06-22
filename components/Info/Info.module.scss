@@ -1,6 +1,6 @@
 .info_background {
   background: #e5e5e5;
-  height: 1100px;
+  height: 1200px;
   .info {
 
     .info_block {
@@ -17,10 +17,12 @@
         left: -15px;
         width: 25%;
         height: 18%;
+        
       }
       .block_des {
         width: 50%;
         height: 500px;
+        margin-top: 100px;
         div {
           height: 400px;
           display: flex;
@@ -63,7 +65,7 @@
         overflow-y: scroll;
         height: 500px;
         padding: 10px;
-
+        margin-top: 100px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -238,6 +240,7 @@
           left: -15px;
           width: 25%;
           height: 18%;
+          
         }
         .block_des {
           width: 50%;
@@ -290,10 +293,10 @@
         padding: 10px;
         width: 90%;
         img {
-          top: -1px;
+          top: 100px;
           left: -15px;
           width: 25%;
-          height: 18%;
+          height: 13%;
         }
         .block_des {
           width: 50%;
@@ -401,7 +404,7 @@
         padding: 10px;
         width: 90%;
         img {
-          top: 10px;
+          top: 90px;
           left: -15px;
           width: 28%;
           height: 12%;
@@ -507,10 +510,10 @@
         padding: 10px;
         width: 90%;
         img {
-          top: 10px;
+          top: 110px;
           left: -1px;
           width: 24%;
-          height: 12%;
+          height: 10%;
         }
         .block_des {
           width: 50%;
@@ -612,7 +615,7 @@
         padding: 10px;
         width: 90%;
         img {
-          top: 10px;
+          top: 100px;
           left: -1px;
           width: 24%;
           height: 12%;
@@ -845,6 +848,7 @@
     height: 1700px;
     .info {
       .info_block {
+        margin-top: 100px;
         gap: 70px;
         padding: 10px;
         width: 90%;
@@ -995,6 +999,7 @@
           height: 250px;
           div {
             .block_des__title {
+              padding-top: 50px;
               text-align: center;
               font-size: 20px;
               line-height: 45px;
@@ -1042,7 +1047,6 @@
       }
     }
     .info_login {
-      margin-top: 100px !important;
       width: 90%;
       height: 900px !important;
       gap: 90px !important;
