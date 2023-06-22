@@ -137,6 +137,7 @@
                         border: 2px solid #000000;
                         border-radius: 5px;
                         transition: 0.3s;
+                        cursor: pointer;
                     }
                     input:hover {
                         border: 2px dashed #ff0000;
@@ -154,7 +155,6 @@
                     }
                     button:hover {
                         background: #d13333e1;
-                        border: 1px solid #ff0000;
                         transition: 0.3s;
                     }
                 }
