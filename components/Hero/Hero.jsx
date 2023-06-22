@@ -8,14 +8,10 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper";
 import { motion } from "framer-motion";
-import {
-  hiddenAnimation,
-  hiddenBottomAnimation,
-  visibleAnimation,
-  visibleBottomAnimation,
-} from "@/constans/animation";
+import { hiddenAnimation, hiddenBottomAnimation, visibleAnimation, visibleBottomAnimation, } from "@/constans/animation";
 
 const Hero = () => {
+
   return (
     <div className="container">
       <div className={s.hero}>

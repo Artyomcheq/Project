@@ -21,11 +21,7 @@ const Trust = () => {
           <h3>Don’t trust us. Trust the industry leaders</h3>
           <Image src="/trustShape.png" width={222} height={94} alt="trustShape" />
         </motion.div>
-        <motion.div
-          initial={hiddenAnimation}
-          whileInView={visibleAnimation(2)}
-          className={s.trust_title_second}
-        >
+        <motion.div className={s.trust_title_second}>
           <p>See what are users are saying about our services and support</p>
         </motion.div>
       </div>
