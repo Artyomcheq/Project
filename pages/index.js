@@ -6,6 +6,7 @@ import Finance from '@/components/Finance/Finance'
 import Info from '@/components/Info/Info'
 import Description from '@/components/Description/Description'
 import About from '@/components/About/About'
+import Xzzz from '@/components/Info/xzzzz'
 
 const inter = Inter({ subsets: ['latin'] })
 

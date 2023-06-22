@@ -1,8 +1,15 @@
 import React from "react";
 import s from "./Info.module.scss";
 import Image from "next/image";
-import { info } from "../constans/Info";
 import { motion } from "framer-motion";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 const textAnimation = {
   hidden: {
@@ -37,7 +44,11 @@ const Info = () => {
     <div className={s.info_background}>
       <div className="container">
         <motion.div initial="hidden" whileInView="visible" className={s.info}>
-          <motion.div variants={textAnimation} custom={2} className={s.info_block}>
+          <motion.div
+            variants={textAnimation}
+            custom={2}
+            className={s.info_block}
+          >
             <Image src="/info-oval.png" alt="oval" width={317} height={86} />
             <div className={s.block_des}>
               <div>
@@ -53,18 +64,111 @@ const Info = () => {
             </div>
             <div className={s.block_set}>
               <div className={s.set_box}>
-                {" "}
-                {info.map((info) => (
-                  <div key={info.id} className={s.set_box__des}>
-                    <p className={s.set_box__des_text}>{info.title}</p>
-                    <p className={s.set_box__des_tas}>{info.text}</p>
-                  </div>
-                ))}
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                  >
+                    <Typography>Maecenas incident laces at velit.</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse malesuada lacus ex, sit amet blandit leo
+                      lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography>Phasellus id sapien in sapien iaculis congue.</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse malesuada lacus ex, sit amet blandit leo
+                      lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography>Maecenas tincidunt lacus at velit.</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse malesuada lacus ex, sit amet blandit leo
+                      lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography>Maecenas tincidunt lacus at velit.</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse malesuada lacus ex, sit amet blandit leo
+                      lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography>Donec semper sapien a libero.</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse malesuada lacus ex, sit amet blandit leo
+                      lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography>Phasellus id sapien in sapien iaculis congue.</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse malesuada lacus ex, sit amet blandit leo
+                      lobortis eget.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </div>
             </div>
           </motion.div>
 
-          <motion.div variants={textAnimation} custom={3} className={s.info_login}>
+          <motion.div
+            variants={textAnimation}
+            custom={3}
+            className={s.info_login}
+          >
             <Image src="/info-green.png" alt="green" width={135} height={125} />
             <div className={s.info_login__register}>
               <div className={s.register_block}>
@@ -72,16 +176,29 @@ const Info = () => {
                 <p className={s.register_block__text}>
                   Morbi non quam nec dui luctus rutrum.
                 </p>
-                <input
-                  className={s.register_block__inp}
-                  type="text"
-                  placeholder="Invoices"
-                />
-                <input
-                  className={s.register_block__inp}
-                  type="text"
-                  placeholder="random@example.com"
-                />
+                <Box
+                  className={s.inputs_box}
+                  component="form"
+                  sx={{
+                    "& > :not(style)": { m: 1, width: "86%" },
+                  }}
+                  noValidate
+                  autoComplete="off"
+                >
+                  <TextField
+                    className={s.register_block__inp}
+                    id="outlined-basic"
+                    label="Product"
+                    variant="outlined"
+                  />
+                  <TextField
+                    className={s.register_block__inp}
+                    id="outlined-basic"
+                    label="Email"
+                    variant="outlined"
+                  />
+                </Box>
+
                 <button className={s.register_block__btn}>CALL ME</button>
                 <p className={s.register_block__texts}>
                   Add anything here to make it look good.

@@ -5,6 +5,7 @@ import "@/styles/globals.css";
 import "@/styles/heroSwiper.css"
 import "@/styles/trustSwiper.css"
 
+import '../styles/Info.css'
 
 export default function App({ Component, pageProps }) {
   return (
