@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import s from "./header.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
+import { hiddenTopAnimation, visibleTopAnimation } from "@/constans/animation";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,18 +30,6 @@ const Header = () => {
     };
   }, []);
 
-  const textAnimation = {
-    hidden: {
-      y: -20,
-      opacity: 0,
-    },
-    visible: (custom) => ({
-      y: 0,
-      opacity: 1,
-      transition: { delay: custom * 0.2 },
-    }),
-  };
-
   return (
     <div className="container">
       <div className={s.header}>
@@ -63,9 +52,7 @@ const Header = () => {
             </div>
             <button onClick={toggleMenu}>
               <div
-                className={`${s.header_burger_line} ${
-                  menuOpen ? s.burger_line_rotate : ""
-                }`}
+                className={`${s.header_burger_line} ${menuOpen ? s.burger_line_rotate : ""}`}
               ></div>
             </button>
           </div>
@@ -83,10 +70,8 @@ const Header = () => {
               className={`${s.header_bottom_row} ${menuOpen ? s.show : ""}`}
             >
               <motion.div
-                initial="hidden"
-                whileInView="visible"
-                custom={1}
-                variants={textAnimation}
+                initial={hiddenTopAnimation}
+                whileInView={visibleTopAnimation(2)}
                 className={s.header_bottom_row_links}
               >
                 <Link href="#">Home</Link>
@@ -96,22 +81,15 @@ const Header = () => {
                 <Link href="#">Contact us</Link>
               </motion.div>
               <motion.div
-                initial="hidden"
-                whileInView="visible"
-                custom={2}
-                variants={textAnimation}
+                initial={hiddenTopAnimation}
+                whileInView={visibleTopAnimation(1)}
                 className={s.header_bottom_row_btn}
               >
                 <Image src="/globus.png" alt="globus" width={20} height={20} />
                 <h3>English</h3>
                 <button>
                   Sign up
-                  <Image
-                    src="/btnArrow.png"
-                    width={5}
-                    height={8}
-                    alt="btnArrow"
-                  />
+                  <Image src="/btnArrow.png" width={5} height={8} alt="btnArrow" />
                 </button>
               </motion.div>
             </motion.div>

@@ -8,70 +8,32 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper";
 import { motion } from "framer-motion";
+import { hiddenAnimation, hiddenBottomAnimation, visibleAnimation, visibleBottomAnimation, } from "@/constans/animation";
 
 const Hero = () => {
-  const textAnimation = {
-    hidden: {
-      x: -100,
-      opacity: 0,
-    },
-    hiddenBottom: {
-      y: 100,
-      opacity: 0,
-    },
-    visible: (custom) => ({
-      x: 0,
-      opacity: 1,
-      transition: { delay: custom * 0.2 },
-    }),
-    visibleBottom: (customBottom) => ({
-      y: 0,
-      opacity: 1,
-      transition: { delay: customBottom * 0.1 },
-    }),
-  };
 
   return (
     <div className="container">
       <div className={s.hero}>
         <div className={s.hero_background}>
-          <Image
-            src="/heroBackground.png"
-            alt="background"
-            width={2000}
-            height={1100}
-          />
+          <Image src="/heroBackground.png" alt="background" width={2000} height={1100} />
         </div>
         <div className={s.hero_elements}>
           <div className={s.hero_elements_left}>
             <motion.div
-              initial="hidden"
-              whileInView="visible"
-              custom={1}
-              variants={textAnimation}
+              initial={hiddenAnimation}
+              whileInView={visibleAnimation(1)}
               className={s.elements_left_title}
             >
               <h1>Start accepting payments in 3 minutes</h1>
-              <Image
-                src="/heroShape.png"
-                width={416}
-                height={168}
-                alt="heroShape"
-              />
+              <Image src="/heroShape.png" width={416} height={168} alt="heroShape" />
             </motion.div>
-            <motion.p
-              initial="hidden"
-              whileInView="visible"
-              custom={2}
-              variants={textAnimation}
-            >
+            <motion.p initial={hiddenAnimation} whileInView={visibleAnimation(2)}>
               Integrate xyz payment gateway without any technical knowledge.{" "}
             </motion.p>
             <motion.div
-              initial="hidden"
-              whileInView="visible"
-              custom={4}
-              variants={textAnimation}
+              initial={hiddenAnimation}
+              whileInView={visibleAnimation(3)}
               className={s.elements_left_btns}
             >
               <button>Start now</button>
@@ -80,10 +42,8 @@ const Hero = () => {
               </button>
             </motion.div>
             <motion.div
-              initial="hidden"
-              whileInView="visible"
-              custom={4}
-              variants={textAnimation}
+              initial={hiddenAnimation}
+              whileInView={visibleAnimation(3)}
               className={s.elements_left_reviews}
             >
               <h3>4.7</h3>
@@ -91,13 +51,7 @@ const Hero = () => {
                 <p>top rated on trustpilot</p>
                 <div className={s.left_reviews_rating_stars}>
                   {heroStar.map((item) => (
-                    <Image
-                      key={item.id}
-                      src={item.img}
-                      width={15}
-                      height={15}
-                      alt="star"
-                    />
+                    <Image key={item.id} src={item.img} width={15} height={15} alt="star" />
                   ))}
                 </div>
               </div>
@@ -123,10 +77,8 @@ const Hero = () => {
         </div>
         <div className={s.hero_bottom_card_position}>
           <motion.div
-            initial="hiddenBottom"
-            whileInView="visibleBottom"
-            customBottom={1}
-            variants={textAnimation}
+            initial={hiddenBottomAnimation}
+            whileInView={visibleBottomAnimation(1)}
             className={s.hero_bottom_card}
           >
             <Swiper
