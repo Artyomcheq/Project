@@ -9,29 +9,9 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper";
 import { motion } from "framer-motion";
+import { hiddenAnimation, visibleAnimation } from "@/constans/animation.js";
 
 const Finance = () => {
-  const textAnimation = {
-    hidden: {
-      x: -100,
-      opacity: 0,
-    },
-    hiddenBottom: {
-      y: 100,
-      opacity: 0,
-    },
-    visible: (custom) => ({
-      x: 0,
-      opacity: 1,
-      transition: { delay: custom * 0.2 },
-    }),
-    visibleBottom: (customBottom) => ({
-      y: 0,
-      opacity: 1,
-      transition: { delay: customBottom * 0.2 },
-    }),
-  };
-
   return (
     <div className="container">
       <div className={s.finance}>
@@ -47,18 +27,14 @@ const Finance = () => {
           <div className={s.finance_elements}>
             <div className={s.finance_elements_title}>
               <motion.p
-                initial="hidden"
-                whileInView="visible"
-                custom={1}
-                variants={textAnimation}
+                initial={hiddenAnimation}
+                whileInView={visibleAnimation(1)}
               >
                 News & Updates
               </motion.p>
               <motion.div
-                initial="hidden"
-                whileInView="visible"
-                custom={2}
-                variants={textAnimation}
+                initial={hiddenAnimation}
+                whileInView={visibleAnimation(2)}
                 className={s.finance_elements_title_general}
               >
                 <h3>We talk about finance</h3>
@@ -129,18 +105,10 @@ const Finance = () => {
               </Swiper>
             </div>
           </div>
-          <motion.div
-            initial="hiddenBottom"
-            whileInView="visibleBottom"
-            customBottom={1}
-            variants={textAnimation}
-            className={s.finance_bottom_row}
-          >
+          <div className={s.finance_bottom_row}>
             <motion.div
-              initial="hidden"
-              whileInView="visible"
-              custom={1}
-              variants={textAnimation}
+              initial={hiddenAnimation}
+              whileInView={visibleAnimation(2)}
               className={s.finance_bottom_row_title}
             >
               <div className={s.bottom_row_title_general}>
@@ -155,14 +123,12 @@ const Finance = () => {
               <p>Ut vel sapien molestie, accumsan dui eu, imperdiet nulla.</p>
             </motion.div>
             <motion.button
-              initial="hidden"
-              whileInView="visible"
-              custom={2}
-              variants={textAnimation}
+              initial={hiddenAnimation}
+              whileInView={visibleAnimation(1)}
             >
               Create <span>an account</span>
             </motion.button>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

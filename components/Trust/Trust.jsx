@@ -7,28 +7,15 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper";
 import { trustCard } from "@/constans/trustSwiper";
 import { motion } from "framer-motion";
+import { hiddenAnimation, visibleAnimation } from "@/constans/animation";
 
 const Trust = () => {
-  const textAnimation = {
-    hidden: {
-      x: -100,
-      opacity: 0,
-    },
-    visible: (custom) => ({
-      x: 0,
-      opacity: 1,
-      transition: { delay: custom * 0.2 },
-    }),
-  };
-
   return (
     <div className={s.trust}>
       <div className={s.trust_title}>
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          custom={1}
-          variants={textAnimation}
+          initial={hiddenAnimation}
+          whileInView={visibleAnimation(1)}
           className={s.trust_title_general}
         >
           <h3>Don’t trust us. Trust the industry leaders</h3>
@@ -40,10 +27,8 @@ const Trust = () => {
           />
         </motion.div>
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          custom={2}
-          variants={textAnimation}
+          initial={hiddenAnimation}
+          whileInView={visibleAnimation(2)}
           className={s.trust_title_second}
         >
           <p>See what are users are saying about our services and support</p>
