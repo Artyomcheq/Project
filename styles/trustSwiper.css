@@ -36,9 +36,9 @@
 
 .custom_btns {
   position: absolute;
-  width: 50%;
+  width: 52.3%;
   margin: 0 auto;
-  top: 0;
+  top: 0px;
   bottom: 0;
   right: 0;
   left: 0;
@@ -48,52 +48,50 @@
 .trust_swiper .swiper-button-next {
   position: absolute;
   top: 50%;
+  width: 40px;
   transform: translateY(-10%);
   transition: .3s;
 }
 
 .trust_swiper .swiper-button-prev:after {
   content: "" !important;
-  background: url("../public/sliderBtn.png") right/cover;
+  background: url("../public/sliderBtn.png") center/cover;
   width: 40px;
   height: 40px;
   left: 0;
 }
 
-.trust_swiper .swiper-button-prev:hover {
-  transform: scale(1.08);
-}
-
 .trust_swiper .swiper-button-next:after {
   content: "" !important;
-  background: url("../public/sliderBtnRight.png") left/cover;
+  background: url("../public/sliderBtnRight.png") center/cover;
   width: 40px;
   height: 40px;
   right: 0;
 }
 
-.trust_swiper .swiper-button-next:hover {
-  transform: scale(1.08);
-}
-
 @media (max-width: 1200px) {
   .custom_btns {
-    width: 59%;
+    width: 61.5%;
   }
 }
 @media (max-width: 1000px) {
   .custom_btns {
-    width: 72%;
+    width: 74.7%;
   }
 }
 @media (max-width: 700px) {
   .custom_btns {
-    width: 84%;
+    width: 88%;
   }
 }
 @media (max-width: 600px) {
   .custom_btns {
     width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .custom_btns {
+    top: -50px;
   }
 }
 @media (max-width: 320px) {
