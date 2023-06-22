@@ -23,9 +23,9 @@ const Preloader = () => {
 
   useEffect(() => {
     if (loading) {
-      document.body.style.overflow = "hidden";
-    } else {
       document.body.style.overflow = "auto";
+    } else {
+      document.body.style.overflow = "auto"; 
       window.scrollTo(0, 0);
     }
   }, [loading]);
