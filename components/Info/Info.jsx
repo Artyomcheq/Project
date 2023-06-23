@@ -7,37 +7,11 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
+import { textAnimation, textAnimationtop} from "../../constans/animation"
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-const textAnimation = {
-  hidden: {
-    x: -100,
-    opacity: 0,
-  },
-  visible: (custom) => ({
-    x: 0,
-    opacity: 1,
-    transition: { delay: custom * 0.2 },
-  }),
-};
 
-const textAnimationtop = {
-  hidden: {
-    y: -100,
-    opacity: 0,
-  },
-  hidden: {
-    y: -100,
-    opacity: 0,
-  },
-  visible: (custom) => ({
-    y: 0,
-    opacity: 1,
-    transition: { delay: custom * 0.2 },
-  }),
-};
 
 const Info = () => {
   return (
@@ -56,7 +30,7 @@ const Info = () => {
                   Enter your custom title here
                 </h3>
                 <p className={s.block_des__text}>
-                  For more information, please visit the Help Center. also find
+                  For more information, please visit the <a href="#">Help Center.</a>  also find
                   all faqs on our faqs page
                 </p>
                 <button className={s.block_des__btn}>Go to Faqs</button>
@@ -214,9 +188,9 @@ const Info = () => {
               <p className={s.text_number__text}>
                 Feel free to contact us here
               </p>
-              <p className={s.text_number}>
+              <a href="#" className={s.text_number}>
                 Call: <span> 1.888.888.888</span>
-              </p>
+              </a>
             </div>
           </motion.div>
         </motion.div>
