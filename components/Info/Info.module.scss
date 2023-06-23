@@ -1,11 +1,10 @@
 .info_background {
-  background: #e5e5e5;
+  background: #fff;
   height: 1200px;
   .info {
     .info_block {
       position: relative;
       display: flex;
-      border-bottom: 1px solid #727272;
       gap: 30px;
       padding: 10px;
       width: 90%;
@@ -42,6 +41,9 @@
             font-size: 20px;
             line-height: 36px;
             color: #000000;
+            a {
+              color: rgb(96, 96, 235);
+            }
           }
           .block_des__btn {
             font-family: "Rubik";
@@ -54,13 +56,17 @@
             border-radius: 5px;
             color: #ffffff;
             padding: 14px 22px;
+            transition: .3s;
+          }
+          .block_des__btn:hover {
+            background: #d13333e1;
           }
         }
       }
 
       .block_set {
         width: 50%;
-        overflow-y: scroll;
+        overflow-y: auto;
         height: 500px;
         padding: 10px;
         margin-top: 100px;
@@ -77,6 +83,7 @@
       }
     }
     .info_login {
+      z-index: 99999;
       position: relative;
       width: 90%;
       height: 600px;
@@ -134,6 +141,10 @@
             height: 40px;
             color: #ffffff;
             background: #fd3b39;
+            transition: .3s;
+          }
+          .register_block__btn:hover {
+            background: #d13333e1;
           }
           .register_block__texts {
             font-family: "Circular";
@@ -186,6 +197,9 @@
           color: #000000;
           span {
             color: #fd3b39;
+          }
+          span:hover {
+            color: #d13333e1;
           }
         }
       }

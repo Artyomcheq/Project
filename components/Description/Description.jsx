@@ -1,36 +1,11 @@
 import React from "react";
 import s from "./Description.module.scss";
 import Image from "next/image";
-import { description } from "../constans/Description";
+import { description } from "../../constans/Description";
 import { motion } from "framer-motion";
+import { textAnimation, textAnimationtop} from "../../constans/animation"
 
-const textAnimation = {
-  hidden: {
-    x: -100,
-    opacity: 0,
-  },
-  visible: custom => ({
-    x: 0,
-    opacity: 1,
-    transition: { delay: custom * 0.1}
-  }),
-};
 
-const textAnimationtop = {
-  hidden: {
-    y: -100,
-    opacity: 0,
-  },
-  hidden: {
-    y: -100,
-    opacity: 0,
-  },
-  visible: custom => ({
-    y: 0,
-    opacity: 1,
-    transition: { delay: custom * .4}
-  }),
-};
 const Description = () => {
 
   
@@ -48,7 +23,7 @@ const Description = () => {
             Acccept payment using invoice, quick checkout, API’s and payment
             buttons
           </motion.p>
-          <Image
+          <Image 
             src="/description-shape.png"
             alt="shape"
             width={325}
@@ -74,7 +49,7 @@ const Description = () => {
                 <motion.p variants={textAnimation} custom={5} className={s.cards_card_text__set}>{description.text}</motion.p>
                 <motion.p variants={textAnimation} custom={6} className={s.cards_card_text__des}>{description.destext}</motion.p>
                 <motion.p variants={textAnimation} custom={7} className={s.cards_card_strela}>
-                  <Image
+                  <Image 
                     src={description.imgstrela}
                     width={24}
                     height={10}

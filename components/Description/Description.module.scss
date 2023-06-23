@@ -74,6 +74,13 @@
         img {
           width: 100%;
           height: 100%;
+          transition: 2s ease;
+          
+        }
+        img:hover {
+          transform: rotate3d(1, 0, 1, 45deg) rotate3d(0, 1, 0, 60deg);
+          border-radius: 50%;
+          perspective: 1000px;
         }
       }
       .cards_card_text {
@@ -140,6 +147,10 @@
       border-radius: 6px;
       color: #ffffff;
       margin-bottom: 172px;
+      transition: 0.3s;
+    }
+    .description_bottom__title_btn:hover {
+      background: #d13333e1;
     }
   }
 }
@@ -160,7 +171,6 @@
         height: 5%;
         bottom: -50px;
         right: -50px;
-  
       }
       .cards_card {
         .cards_card_text {
@@ -197,7 +207,6 @@
         height: 5%;
         bottom: -50px;
         right: -50px;
-  
       }
       .cards_card {
         .cards_card_text {
@@ -238,7 +247,6 @@
         height: 5%;
         bottom: -30px;
         right: -40px;
-  
       }
       .cards_card {
         .cards_card_text {
@@ -353,9 +361,8 @@
         height: 5%;
         bottom: -20px;
         right: -30px;
-  
       }
-      
+
       .cards_card {
         padding: 25px 50px;
         gap: 80px;
@@ -399,9 +406,8 @@
         height: 5%;
         bottom: -20px;
         right: -30px;
-  
       }
-      
+
       .cards_card {
         padding: 25px 50px;
         gap: 80px;
@@ -452,7 +458,6 @@
         height: 5%;
         bottom: -20px;
         right: -25px;
-  
       }
       .cards_blue {
         left: -18px;
@@ -503,7 +508,6 @@
         height: 5%;
         bottom: -15px;
         right: -20px;
-  
       }
       .cards_card {
         padding: 20px 40px;
@@ -564,7 +568,6 @@
         height: 5%;
         bottom: -10px;
         right: -20px;
-  
       }
       .cards_blue {
         left: -12px;
@@ -614,7 +617,6 @@
         height: 5%;
         bottom: -7px;
         right: -15px;
-  
       }
       gap: 25px;
       .cards_blue {

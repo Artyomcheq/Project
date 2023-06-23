@@ -2,34 +2,7 @@ import React from "react";
 import s from "./About.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-const textAnimation = {
-  hidden: {
-    x: -100,
-    opacity: 0,
-  },
-  visible: (custom) => ({
-    x: 0,
-    opacity: 1,
-    transition: { delay: custom * 0.2 },
-  }),
-};
-
-const textAnimationtop = {
-  hidden: {
-    y: -100,
-    opacity: 0,
-  },
-  hidden: {
-    y: -100,
-    opacity: 0,
-  },
-  visible: (custom) => ({
-    y: 0,
-    opacity: 1,
-    transition: { delay: custom * 0.2 },
-  }),
-};
+import { textAnimation, textAnimationtop} from "../../constans/animation"
 
 const About = () => {
   return (
